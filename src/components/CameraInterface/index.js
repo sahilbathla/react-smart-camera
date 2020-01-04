@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './CameraInterface.scss';
+import '../../assets/styles/global.scss';
 import CameraPreview from '../CameraPreview';
 import * as RecordIcon from '../../assets/images/record-icon.png';
 
