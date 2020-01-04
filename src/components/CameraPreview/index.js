@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './CameraPreview.scss';
+import ExifOrientationImg from 'react-exif-orientation-img';
 
 export default class ImagePreview extends Component {
   render() {
     return (
       <div className="camera-preview">
-        <img src={this.props.src} />
+        <ExifOrientationImg className="camera-preview__image" src={this.props.src}/>
       </div>
     )
   }

@@ -1,3 +1,7 @@
 .camera-preview {
   text-align: center;
+
+  &__image {
+    height: 100vh;
+  }
 }
