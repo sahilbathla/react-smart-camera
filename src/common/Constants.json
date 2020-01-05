@@ -1,0 +1,6 @@
+{
+  "CAMERA_STATES": {
+    "OPEN": "open",
+    "PREVIEW": "preview"
+  }
+}

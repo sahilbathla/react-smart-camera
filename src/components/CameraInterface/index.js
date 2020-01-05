@@ -1,35 +1,40 @@
 import React, { Component } from 'react';
+import Camera from 'react-camera-extended';
 import './CameraInterface.scss';
-import '../../assets/styles/global.scss';
-import CameraPreview from '../CameraPreview';
+import Constants from '../../common/Constants';
+import { Redirect } from 'react-router-dom';
 import * as RecordIcon from '../../assets/images/record-icon.png';
 
-import Camera from './Camera';
 
 export default class CameraInterface extends Component {
 
   constructor(props) {
     super(props);
-    this.takePicture = this.takePicture;
   }
 
   componentDidMount() {
+    this.props.history.push({ pathname: '/' });
     this.state = {
-      cameraState: 'open'
+      cameraState: Constants.CAMERA_STATES.OPEN,
+      previewSrc: null
     }
   }
 
   takePicture = () => {
-    this.camera.src = this.camera.capture();
-    this.setState(({cameraState: 'preview'}));
+    const previewSrc = this.camera.capture();
+    this.setState(({ cameraState: Constants.CAMERA_STATES.PREVIEW, previewSrc }));
   };
 
   render() {
-    if (this.camera && this.camera.src) {
+    if (this.state && this.state.previewSrc) {
+      const src = this.state.previewSrc;
       return(
-        <div>
-          <CameraPreview src={this.camera.src} />
-        </div>
+        <Redirect
+          to={{
+            pathname: '/camera-preview',
+              state: { src }
+          }}
+        />
       )
     } else {
       return (
