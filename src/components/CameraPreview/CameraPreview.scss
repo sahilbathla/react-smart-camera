@@ -1,3 +1,11 @@
 .camera-preview {
   text-align: center;
+
+  &__image {
+    width: 100%;
+    @media (max-width:480px) {
+      height: 100vh;
+      width: auto;
+    }
+  }
 }
