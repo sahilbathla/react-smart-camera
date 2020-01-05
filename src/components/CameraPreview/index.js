@@ -7,6 +7,9 @@ export default class ImagePreview extends Component {
     return (
       <div className="camera-preview">
         <ExifOrientationImg className="camera-preview__image" src={this.props.location.state.src}/>
+        <footer className="camera-preview__footer">
+            <button>Back</button>
+        </footer>
       </div>
     )
   }
