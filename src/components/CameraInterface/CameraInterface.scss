@@ -8,14 +8,5 @@
     width: 100%;
     text-align: center;
   }
-
-  /*
-    !important required due to
-    Shortcoming of react-camera that is using height: 100% without any override
-  */
-  video {
-    width: auto !important;
-    height: 100vh !important;
-  }
 }
 
