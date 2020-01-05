@@ -4,7 +4,7 @@ import '../../assets/styles/global.scss';
 import CameraPreview from '../CameraPreview';
 import * as RecordIcon from '../../assets/images/record-icon.png';
 
-import Camera from 'react-camera';
+import Camera from './Camera';
 
 export default class CameraInterface extends Component {
 
@@ -20,11 +20,8 @@ export default class CameraInterface extends Component {
   }
 
   takePicture = () => {
-    this.camera.capture()
-      .then(blob => {
-        this.camera.src = URL.createObjectURL(blob);
-        this.setState(({cameraState: 'preview'}))
-      })
+    this.camera.src = this.camera.capture();
+    this.setState(({cameraState: 'preview'}));
   };
 
   render() {
@@ -37,7 +34,7 @@ export default class CameraInterface extends Component {
     } else {
       return (
         <div className="camera-interface">
-          <Camera ref={(cam) => { this.camera = cam;}} />
+          <Camera ref={(cam) => { this.camera = cam;}} tryRearCamera={true} />
           <footer className="camera-interface__footer" >
             <img src={RecordIcon}  className="camera-interface__footer__capture-button" onClick={this.takePicture} >
             </img>
