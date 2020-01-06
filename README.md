@@ -36,6 +36,17 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+## Directory Structure
+
+```
+ - src
+ --- App.js // Starting point
+ --- components
+ --- assets // assets required i.e common images
+ --- common // constants for now
+ --- services //Upload Image Service
+```
+
 ## More information
 
 - Unit test cases are pending.
