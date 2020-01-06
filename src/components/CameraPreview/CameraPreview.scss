@@ -1,4 +1,21 @@
 .camera-preview {
+  &__loader {
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    background-color: black;
+    position: fixed;
+    text-align: center;
+    opacity: 0.5;
+
+    &__message {
+      position: absolute;
+      top: calc(50% - 20px);
+      left: calc(50% - 20px);
+      color: white;
+    }
+  }
+
   // same css as video container;
   position: absolute;
   top: 0px;

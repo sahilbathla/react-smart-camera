@@ -8527,10 +8527,10 @@ react-app-polyfill@^1.0.4:
     regenerator-runtime "^0.13.3"
     whatwg-fetch "^3.0.0"
 
-react-camera-extended@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/react-camera-extended/-/react-camera-extended-0.0.4.tgz#04c9311ca61c26c51690b3f4c0c4f36368b31c7a"
-  integrity sha512-YMQ9FhfsAq/p32XRKRxos8LAYLy4ZoqgrXNevHzTj1PNBq9cgf3J7FdqWwKAqiGB0jPt9mNqhvhuJ+9J5V5ZwA==
+react-camera-extended@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/react-camera-extended/-/react-camera-extended-0.0.7.tgz#5137b59411d5feaf36771144f8b38853b5b5b650"
+  integrity sha512-pDGbm8btykHmfsZbdRYQ4CLBWKstvCEz5708c3yXvAj1uB48a7OK4yRMy5JSuMtxUU3PlD7XUiQ6lAmRBdMlhw==
 
 react-dev-utils@^9.1.0:
   version "9.1.0"
